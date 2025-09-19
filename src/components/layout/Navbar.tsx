@@ -36,6 +36,11 @@ export const Navbar: React.FC = () => {
       path: dashboardRoute,
     },
     {
+      icon: user?.role === 'Calender' ? <Building2 size={18} /> : <CircleDollarSign size={18} />,
+      text: 'Calender',
+      path: user ? '/calender' : '/login',
+    },
+    {
       icon: <MessageCircle size={18} />,
       text: 'Messages',
       path: user ? '/messages' : '/login',
